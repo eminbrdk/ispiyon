@@ -7,23 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772D75E98712A0BC753697A3 /* Pods_ispiyon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D38F3DA69EAC2A39D52B34F /* Pods_ispiyon.framework */; };
+		B824389E29C07C28004660E1 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824389D29C07C28004660E1 /* UIColor + Ext.swift */; };
+		B82438A129C07D06004660E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82438A029C07D06004660E1 /* Constants.swift */; };
+		B82438A329C08407004660E1 /* Navigation-Tabbar-Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82438A229C08407004660E1 /* Navigation-Tabbar-Helper.swift */; };
 		B8EF68C129BF2F7B00DF0358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68C029BF2F7B00DF0358 /* AppDelegate.swift */; };
 		B8EF68C329BF2F7B00DF0358 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68C229BF2F7B00DF0358 /* SceneDelegate.swift */; };
-		B8EF68C529BF2F7B00DF0358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68C429BF2F7B00DF0358 /* ViewController.swift */; };
-		B8EF68C829BF2F7B00DF0358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8EF68C629BF2F7B00DF0358 /* Main.storyboard */; };
 		B8EF68CA29BF2F7D00DF0358 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8EF68C929BF2F7D00DF0358 /* Assets.xcassets */; };
 		B8EF68CD29BF2F7D00DF0358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8EF68CB29BF2F7D00DF0358 /* LaunchScreen.storyboard */; };
+		B8EF68D529BF300C00DF0358 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68D429BF300C00DF0358 /* WelcomeVC.swift */; };
+		B8EF68DA29BF30E900DF0358 /* IspButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68D929BF30E900DF0358 /* IspButton.swift */; };
+		B8EF68DE29BF352D00DF0358 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68DD29BF352D00DF0358 /* AuthenticationVC.swift */; };
+		B8EF68E029BF375500DF0358 /* IspTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68DF29BF375500DF0358 /* IspTextField.swift */; };
+		B8EF68E329BF392D00DF0358 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68E229BF392D00DF0358 /* UIView + Ext.swift */; };
+		B8EF68E529BF3E6700DF0358 /* IspiyonlaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68E429BF3E6700DF0358 /* IspiyonlaVC.swift */; };
+		B8EF68E729BF3E9700DF0358 /* IspiyonlarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68E629BF3E9700DF0358 /* IspiyonlarVC.swift */; };
+		B8EF68E929BF4C3400DF0358 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8EF68E829BF4C3400DF0358 /* GoogleService-Info.plist */; };
+		B8EF68EB29BF502B00DF0358 /* IspTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68EA29BF502B00DF0358 /* IspTabbarController.swift */; };
+		B8EF68ED29BF585500DF0358 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68EC29BF585500DF0358 /* UIViewController + Ext.swift */; };
+		B8EF68EF29BF6E5900DF0358 /* IspTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68EE29BF6E5900DF0358 /* IspTextView.swift */; };
+		B8EF68F129BF9BAF00DF0358 /* ŞikayetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68F029BF9BAF00DF0358 /* ŞikayetCell.swift */; };
+		B8EF68F329BF9EA900DF0358 /* IspTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68F229BF9EA900DF0358 /* IspTitleLabel.swift */; };
+		B8EF68F529BF9F1C00DF0358 /* IspSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68F429BF9F1C00DF0358 /* IspSecondaryTitleLabel.swift */; };
+		B8EF68F729BF9F9900DF0358 /* IspTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68F629BF9F9900DF0358 /* IspTextLabel.swift */; };
+		B8EF68F929BFB8A300DF0358 /* IspiyonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68F829BFB8A300DF0358 /* IspiyonVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8659F9FF4A4D7C3AECBF527C /* Pods-ispiyon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ispiyon.release.xcconfig"; path = "Target Support Files/Pods-ispiyon/Pods-ispiyon.release.xcconfig"; sourceTree = "<group>"; };
+		8D38F3DA69EAC2A39D52B34F /* Pods_ispiyon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ispiyon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B824389D29C07C28004660E1 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
+		B82438A029C07D06004660E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B82438A229C08407004660E1 /* Navigation-Tabbar-Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation-Tabbar-Helper.swift"; sourceTree = "<group>"; };
 		B8EF68BD29BF2F7B00DF0358 /* ispiyon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ispiyon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8EF68C029BF2F7B00DF0358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8EF68C229BF2F7B00DF0358 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B8EF68C429BF2F7B00DF0358 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B8EF68C729BF2F7B00DF0358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8EF68C929BF2F7D00DF0358 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8EF68CC29BF2F7D00DF0358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8EF68CE29BF2F7D00DF0358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8EF68D429BF300C00DF0358 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		B8EF68D929BF30E900DF0358 /* IspButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspButton.swift; sourceTree = "<group>"; };
+		B8EF68DD29BF352D00DF0358 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
+		B8EF68DF29BF375500DF0358 /* IspTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspTextField.swift; sourceTree = "<group>"; };
+		B8EF68E229BF392D00DF0358 /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
+		B8EF68E429BF3E6700DF0358 /* IspiyonlaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspiyonlaVC.swift; sourceTree = "<group>"; };
+		B8EF68E629BF3E9700DF0358 /* IspiyonlarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspiyonlarVC.swift; sourceTree = "<group>"; };
+		B8EF68E829BF4C3400DF0358 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B8EF68EA29BF502B00DF0358 /* IspTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspTabbarController.swift; sourceTree = "<group>"; };
+		B8EF68EC29BF585500DF0358 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
+		B8EF68EE29BF6E5900DF0358 /* IspTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspTextView.swift; sourceTree = "<group>"; };
+		B8EF68F029BF9BAF00DF0358 /* ŞikayetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ŞikayetCell.swift"; sourceTree = "<group>"; };
+		B8EF68F229BF9EA900DF0358 /* IspTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspTitleLabel.swift; sourceTree = "<group>"; };
+		B8EF68F429BF9F1C00DF0358 /* IspSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspSecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		B8EF68F629BF9F9900DF0358 /* IspTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspTextLabel.swift; sourceTree = "<group>"; };
+		B8EF68F829BFB8A300DF0358 /* IspiyonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspiyonVC.swift; sourceTree = "<group>"; };
+		D076A2A74014D2C61CA4E22C /* Pods-ispiyon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ispiyon.debug.xcconfig"; path = "Target Support Files/Pods-ispiyon/Pods-ispiyon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +69,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				772D75E98712A0BC753697A3 /* Pods_ispiyon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B824389F29C07CF3004660E1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B82438A029C07D06004660E1 /* Constants.swift */,
+				B82438A229C08407004660E1 /* Navigation-Tabbar-Helper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		B8EF68B429BF2F7B00DF0358 = {
 			isa = PBXGroup;
 			children = (
 				B8EF68BF29BF2F7B00DF0358 /* ispiyon */,
 				B8EF68BE29BF2F7B00DF0358 /* Products */,
+				D36ABA68141FA228EC950D11 /* Pods */,
+				C3346E428F8AA7729E5911C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +106,80 @@
 		B8EF68BF29BF2F7B00DF0358 /* ispiyon */ = {
 			isa = PBXGroup;
 			children = (
-				B8EF68C029BF2F7B00DF0358 /* AppDelegate.swift */,
-				B8EF68C229BF2F7B00DF0358 /* SceneDelegate.swift */,
-				B8EF68C429BF2F7B00DF0358 /* ViewController.swift */,
-				B8EF68C629BF2F7B00DF0358 /* Main.storyboard */,
-				B8EF68C929BF2F7D00DF0358 /* Assets.xcassets */,
-				B8EF68CB29BF2F7D00DF0358 /* LaunchScreen.storyboard */,
+				B824389F29C07CF3004660E1 /* Utilities */,
+				B8EF68E129BF391600DF0358 /* Extensions */,
+				B8EF68D829BF309600DF0358 /* Custom Views */,
+				B8EF68D729BF308700DF0358 /* Screens */,
+				B8EF68D629BF307B00DF0358 /* Supports */,
 				B8EF68CE29BF2F7D00DF0358 /* Info.plist */,
+				B8EF68E829BF4C3400DF0358 /* GoogleService-Info.plist */,
 			);
 			path = ispiyon;
+			sourceTree = "<group>";
+		};
+		B8EF68D629BF307B00DF0358 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				B8EF68C029BF2F7B00DF0358 /* AppDelegate.swift */,
+				B8EF68C229BF2F7B00DF0358 /* SceneDelegate.swift */,
+				B8EF68C929BF2F7D00DF0358 /* Assets.xcassets */,
+				B8EF68CB29BF2F7D00DF0358 /* LaunchScreen.storyboard */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		B8EF68D729BF308700DF0358 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B8EF68D429BF300C00DF0358 /* WelcomeVC.swift */,
+				B8EF68DD29BF352D00DF0358 /* AuthenticationVC.swift */,
+				B8EF68E429BF3E6700DF0358 /* IspiyonlaVC.swift */,
+				B8EF68E629BF3E9700DF0358 /* IspiyonlarVC.swift */,
+				B8EF68F829BFB8A300DF0358 /* IspiyonVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B8EF68D829BF309600DF0358 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8EF68D929BF30E900DF0358 /* IspButton.swift */,
+				B8EF68DF29BF375500DF0358 /* IspTextField.swift */,
+				B8EF68EA29BF502B00DF0358 /* IspTabbarController.swift */,
+				B8EF68EE29BF6E5900DF0358 /* IspTextView.swift */,
+				B8EF68F029BF9BAF00DF0358 /* ŞikayetCell.swift */,
+				B8EF68F229BF9EA900DF0358 /* IspTitleLabel.swift */,
+				B8EF68F429BF9F1C00DF0358 /* IspSecondaryTitleLabel.swift */,
+				B8EF68F629BF9F9900DF0358 /* IspTextLabel.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		B8EF68E129BF391600DF0358 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8EF68E229BF392D00DF0358 /* UIView + Ext.swift */,
+				B8EF68EC29BF585500DF0358 /* UIViewController + Ext.swift */,
+				B824389D29C07C28004660E1 /* UIColor + Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C3346E428F8AA7729E5911C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D38F3DA69EAC2A39D52B34F /* Pods_ispiyon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D36ABA68141FA228EC950D11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D076A2A74014D2C61CA4E22C /* Pods-ispiyon.debug.xcconfig */,
+				8659F9FF4A4D7C3AECBF527C /* Pods-ispiyon.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8EF68D129BF2F7D00DF0358 /* Build configuration list for PBXNativeTarget "ispiyon" */;
 			buildPhases = (
+				1CD9B2435FE8E21788C4EF49 /* [CP] Check Pods Manifest.lock */,
 				B8EF68B929BF2F7B00DF0358 /* Sources */,
 				B8EF68BA29BF2F7B00DF0358 /* Frameworks */,
 				B8EF68BB29BF2F7B00DF0358 /* Resources */,
+				E4936299A63B38621C34F55C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,35 +243,86 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8EF68CD29BF2F7D00DF0358 /* LaunchScreen.storyboard in Resources */,
+				B8EF68E929BF4C3400DF0358 /* GoogleService-Info.plist in Resources */,
 				B8EF68CA29BF2F7D00DF0358 /* Assets.xcassets in Resources */,
-				B8EF68C829BF2F7B00DF0358 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CD9B2435FE8E21788C4EF49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ispiyon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4936299A63B38621C34F55C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ispiyon/Pods-ispiyon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ispiyon/Pods-ispiyon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ispiyon/Pods-ispiyon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B8EF68B929BF2F7B00DF0358 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8EF68C529BF2F7B00DF0358 /* ViewController.swift in Sources */,
+				B8EF68D529BF300C00DF0358 /* WelcomeVC.swift in Sources */,
+				B82438A129C07D06004660E1 /* Constants.swift in Sources */,
+				B824389E29C07C28004660E1 /* UIColor + Ext.swift in Sources */,
+				B8EF68F129BF9BAF00DF0358 /* ŞikayetCell.swift in Sources */,
+				B8EF68E329BF392D00DF0358 /* UIView + Ext.swift in Sources */,
 				B8EF68C129BF2F7B00DF0358 /* AppDelegate.swift in Sources */,
+				B8EF68F329BF9EA900DF0358 /* IspTitleLabel.swift in Sources */,
+				B82438A329C08407004660E1 /* Navigation-Tabbar-Helper.swift in Sources */,
+				B8EF68E029BF375500DF0358 /* IspTextField.swift in Sources */,
+				B8EF68EF29BF6E5900DF0358 /* IspTextView.swift in Sources */,
+				B8EF68ED29BF585500DF0358 /* UIViewController + Ext.swift in Sources */,
+				B8EF68F529BF9F1C00DF0358 /* IspSecondaryTitleLabel.swift in Sources */,
+				B8EF68E729BF3E9700DF0358 /* IspiyonlarVC.swift in Sources */,
+				B8EF68DA29BF30E900DF0358 /* IspButton.swift in Sources */,
+				B8EF68E529BF3E6700DF0358 /* IspiyonlaVC.swift in Sources */,
 				B8EF68C329BF2F7B00DF0358 /* SceneDelegate.swift in Sources */,
+				B8EF68F929BFB8A300DF0358 /* IspiyonVC.swift in Sources */,
+				B8EF68EB29BF502B00DF0358 /* IspTabbarController.swift in Sources */,
+				B8EF68F729BF9F9900DF0358 /* IspTextLabel.swift in Sources */,
+				B8EF68DE29BF352D00DF0358 /* AuthenticationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B8EF68C629BF2F7B00DF0358 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B8EF68C729BF2F7B00DF0358 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B8EF68CB29BF2F7D00DF0358 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,18 +450,18 @@
 		};
 		B8EF68D229BF2F7D00DF0358 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D076A2A74014D2C61CA4E22C /* Pods-ispiyon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5CV2BM6V4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ispiyon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,18 +477,18 @@
 		};
 		B8EF68D329BF2F7D00DF0358 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8659F9FF4A4D7C3AECBF527C /* Pods-ispiyon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5CV2BM6V4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ispiyon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
