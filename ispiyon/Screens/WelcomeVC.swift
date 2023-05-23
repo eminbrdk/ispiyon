@@ -6,55 +6,91 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 class WelcomeVC: UIViewController {
 
+    let ispikİmage = UIImageView(image: UIImage(named: "ispik"))
     let welcomteText = IspTitleLabel()
-    let buttonStackView = UIStackView()
-    let loginButton = IspButton(title: "Giriş Yap", backgroundColor: IspColors.buttonColor1)
-    let signUpButton = IspButton(title: "Kaydol", backgroundColor: IspColors.buttonColor2)
+    let loginButton = IspButton(title: "Google İle Giriş Yap", backgroundColor: IspColors.buttonColor1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        applyDefaultScreenSettings()
-        configureButtonStackView()
+        setUpGoogle()
+        configureView()
+        configureCustomViews()
     }
     
-    func configureButtonStackView() {
-        view.addSubviews(buttonStackView, welcomteText)
+    private func configureView() {
+        title = "isp!k"
+        applyDefaultScreenSettings()
+    }
+    
+    private func setUpGoogle() {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+    }
+    
+    private func configureCustomViews() {
+        view.addSubviews(ispikİmage, loginButton, welcomteText)
         
-        buttonStackView.addArrangedSubview(loginButton)
-        buttonStackView.addArrangedSubview(signUpButton)
-        
-        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
-        buttonStackView.axis = .horizontal
-        buttonStackView.spacing = 10
-        buttonStackView.distribution = .fill
+        ispikİmage.translatesAutoresizingMaskIntoConstraints = false
+        ispikİmage.layer.cornerRadius = 10
+        ispikİmage.clipsToBounds = true
+        ispikİmage.contentMode = .scaleAspectFill
         
         welcomteText.numberOfLines = 0
-        welcomteText.text = "ispiğe hoşgeldiniz\ntoplu taşımalar yada taksi gibi ulaşım için kullanılan araçlar hakkında şikayetlerinizi belirtin ve başka şikayetleri görün"
+        welcomteText.text = "İspiğe hoşgeldiniz\nToplu taşımalar ya da taksi gibi ulaşım için kullanılan araçlar hakkında şikayetlerinizi belirtin ve başka şikayetleri görün 🚎"
         welcomteText.textAlignment = .center
         
-        makeSidesPadding(items: buttonStackView, welcomteText, padding: 15)
+        loginButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        
+        view.makeSidesPadding(items: ispikİmage, padding: 80)
+        view.makeSidesPadding(items: loginButton, welcomteText, padding: 20)
         
         NSLayoutConstraint.activate([
-            welcomteText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
-            welcomteText.heightAnchor.constraint(equalToConstant: 200),
+            ispikİmage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            ispikİmage.heightAnchor.constraint(equalTo: ispikİmage.widthAnchor),
             
-            buttonStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 120),
-            buttonStackView.heightAnchor.constraint(equalToConstant: 50)
+            welcomteText.topAnchor.constraint(equalTo: ispikİmage.bottomAnchor, constant: 30),
+            welcomteText.heightAnchor.constraint(equalToConstant: 160),
+            
+            loginButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            loginButton.heightAnchor.constraint(equalToConstant: 50)
         ])
-        
-        loginButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        signUpButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
     
-    @objc func buttonPressed(sender: UIButton!) {
-        let authenticationVC = AuthenticationVC()
-        authenticationVC.title = sender.titleLabel?.text
-        authenticationVC.authenticationType = sender.titleLabel?.text == "Giriş Yap" ? .login : .signup
-        
-        navigationController?.pushViewController(authenticationVC, animated: true)
+    @objc private func buttonPressed(sender: UIButton!) {
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [weak self] result, error in
+            guard let self, error == nil else {
+                self?.presentIspAlert(title: "Upss", message: IspError.signInError.rawValue, buttonTitle: "Tamam")
+                return
+            } 
+            guard let user = result?.user, let idToken = user.idToken?.tokenString else {
+                self.presentIspAlert(title: "Upss", message: IspError.userError.rawValue, buttonTitle: "Tamam")
+                return
+            }
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+            
+            self.signInWithGoogle(credential: credential)
+        }
+    }
+    
+    private func signInWithGoogle(credential: AuthCredential) {
+        Auth.auth().signIn(with: credential) { [weak self] data, err in
+            guard let self, err == nil else {
+                self?.presentIspAlert(title: "Upss", message: IspError.signInError.rawValue, buttonTitle: "Tamam")
+                return
+            }
+            let tabbar = IspTabbarController()
+            
+            tabbar.modalPresentationStyle = .fullScreen
+            tabbar.modalTransitionStyle = .crossDissolve
+            self.present(tabbar, animated: true)
+        }
     }
 }

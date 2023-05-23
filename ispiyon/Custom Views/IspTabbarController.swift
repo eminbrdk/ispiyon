@@ -11,7 +11,6 @@ class IspTabbarController: UITabBarController {
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
         configure()
     }
     
@@ -23,19 +22,17 @@ class IspTabbarController: UITabBarController {
         viewControllers = [createIspiyonlaNC(), createIspiyonlarNC()]
     }
     
-    func createIspiyonlaNC() -> UINavigationController {
-        let ispiyonlaVC = IspiyonlaVC()
-        ispiyonlaVC.title = "İspiyonla"
-        ispiyonlaVC.tabBarItem = UITabBarItem(title: "ispiyonla", image: UIImage(systemName: "pencil"), tag: 0)
+    private func createIspiyonlaNC() -> UINavigationController {
+        let vc = ComplainVC()
+        vc.tabBarItem = UITabBarItem(title: "ispiyonla", image: UIImage(systemName: "pencil"), tag: 0)
         
-        return UINavigationController(rootViewController: ispiyonlaVC)
+        return UINavigationController(rootViewController: vc)
     }
     
-    func createIspiyonlarNC() -> UINavigationController {
-        let ispiyonlarVC = IspiyonlarVC()
-        ispiyonlarVC.title = "İspiyonlar"
-        ispiyonlarVC.tabBarItem = UITabBarItem(title: "ispiyonlar", image: UIImage(systemName: "folder.fill"), tag: 1)
+    private func createIspiyonlarNC() -> UINavigationController {
+        let vc = ComplaintsVC()
+        vc.tabBarItem = UITabBarItem(title: "ispiyonlar", image: UIImage(systemName: "folder.fill"), tag: 1)
         
-        return UINavigationController(rootViewController: ispiyonlarVC)
+        return UINavigationController(rootViewController: vc)
     }
 }

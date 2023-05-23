@@ -5,23 +5,14 @@
 //  Created by Muhammed Emin Bardakcı on 13.03.2023.
 //
 
-import Foundation
+import UIKit
 import Firebase
 
 extension UIViewController {
     
     func applyDefaultScreenSettings() {
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
-        view.backgroundColor = IspColors.viewBackgroundColor
-    }
-    
-    func makeSidesPadding(items: UIView..., padding: CGFloat) {
-        for item in items {
-            NSLayoutConstraint.activate([
-                item.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-                item.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
-            ])
-        }
+        view.backgroundColor = .systemBackground
     }
     
     func addSignOutButtonToRight() {
@@ -29,18 +20,33 @@ extension UIViewController {
     }
     
     @objc func signOutPressed() {
-        do {
-            try FirebaseAuth.Auth.auth().signOut()
-        } catch {
-            return
-        }
+        let alert = UIAlertController(title: "Çıkış", message: "Uygulamadan çıkmak istediğinize emin misiniz?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "İptal", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Çıkış Yap", style: .default, handler: { [weak self] _ in
+            guard let self else { return }
+            
+            do {
+                try FirebaseAuth.Auth.auth().signOut()
+            } catch {
+                return
+            }
+            
+            let welcomeVC = WelcomeVC()
+            welcomeVC.title = "ispik"
+            
+            let nc = UINavigationController(rootViewController: welcomeVC)
+            nc.modalPresentationStyle = .fullScreen
+            nc.modalTransitionStyle = .crossDissolve
+            self.present(nc, animated: true)
+        }))
         
-        let welcomeVC = WelcomeVC()
-        welcomeVC.title = "ispik"
-        
-        let nc = UINavigationController(rootViewController: welcomeVC)
-        nc.modalPresentationStyle = .fullScreen
-        nc.modalTransitionStyle = .crossDissolve
-        present(nc, animated: true)
+        present(alert, animated: true)
+    }
+    
+    func presentIspAlert(title: String, message: String, buttonTitle: String) {
+        let alertVC = IspAlertVC(title: title, message: message, buttonTitle: buttonTitle)
+        alertVC.modalPresentationStyle = .overFullScreen
+        alertVC.modalTransitionStyle = .crossDissolve
+        present(alertVC, animated: true)
     }
 }

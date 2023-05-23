@@ -27,7 +27,7 @@ class IspTextLabel: UILabel {
         translatesAutoresizingMaskIntoConstraints = false
         
         textAlignment = .left
-        textColor = .white
+        textColor = .label
         font = UIFont.preferredFont(forTextStyle: .body)
         
         adjustsFontForContentSizeCategory = true

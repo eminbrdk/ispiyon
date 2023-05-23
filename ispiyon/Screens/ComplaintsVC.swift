@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class IspiyonlarVC: UIViewController {
+class ComplaintsVC: UIViewController {
     
     var complaints: [[String: Any]] = []
     let tableView = UITableView()
@@ -16,8 +16,7 @@ class IspiyonlarVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        applyDefaultScreenSettings()
-        addSignOutButtonToRight()
+        configureView()
         configureTableView()
     }
     
@@ -25,38 +24,47 @@ class IspiyonlarVC: UIViewController {
         takeData()
     }
     
-    func configureTableView() {
+    private func configureView() {
+        title = "ispiyonlar"
+        applyDefaultScreenSettings()
+        addSignOutButtonToRight()
+    }
+    
+    private func configureTableView() {
         view.addSubview(tableView)
         
-        tableView.backgroundColor = IspColors.viewBackgroundColor
+        tableView.backgroundColor = .systemBackground
         tableView.frame = view.bounds
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight =  150
+        tableView.rowHeight =  160
+        tableView.separatorStyle = .none
         tableView.tableFooterView = UIView(frame: .zero)
         
         tableView.register(SikayetCell.self, forCellReuseIdentifier: SikayetCell.reuseID)
     }
     
-    func takeData() {
-        let db = Firestore.firestore()
-        
-        db.collection("ispiyon").order(by: "zaman", descending: true).addSnapshotListener { [weak self] querySnapshot, error in
+    private func takeData() {
+        DataManager.shared.takeAllData { [weak self] result in
             guard let self else { return }
-            guard error == nil else { return }
             
-            self.complaints = []
-            for documnet in querySnapshot!.documents {
-                self.complaints.append(documnet.data())
+            switch result {
+            case .failure(let err):
+                self.presentIspAlert(title: "Upss", message: err.rawValue, buttonTitle: "Tamam")
+                return
+                
+            case .success(let querySnapshot):
+                self.complaints = []
+                for documnet in querySnapshot.documents {
+                    self.complaints.append(documnet.data())
+                }
+                self.tableView.reloadData()
             }
-        
-            self.tableView.reloadData()
         }
     }
-    
 }
 
-extension IspiyonlarVC: UITableViewDelegate, UITableViewDataSource {
+extension ComplaintsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return complaints.count
@@ -72,7 +80,7 @@ extension IspiyonlarVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let content = complaints[indexPath.row]
-        let ispiyonVC = IspiyonVC()
+        let ispiyonVC = ComplaintVC()
         ispiyonVC.title = "ispiyon"
         ispiyonVC.set(vehicleType: content["araç"] as! String, plaque: content["plaka"] as! String, user: content["gönderen"] as! String, complaint: content["şikayet"] as! String)
         

@@ -23,7 +23,7 @@ class IspSecondaryTitleLabel: UILabel {
         translatesAutoresizingMaskIntoConstraints = false
         
         font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        textColor = .white
+        textColor = .secondaryLabel
         
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.90

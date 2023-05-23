@@ -11,7 +11,6 @@ class IspTitleLabel: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         configure()
     }
     
@@ -23,11 +22,12 @@ class IspTitleLabel: UILabel {
         translatesAutoresizingMaskIntoConstraints = false
         
         textAlignment = .left
-        font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        textColor = IspColors.titleColor
+        font = UIFont.systemFont(ofSize: 23, weight: .bold)
+        textColor = .label
         
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.9
+        numberOfLines = 1
         lineBreakMode = .byTruncatingTail
     }
 

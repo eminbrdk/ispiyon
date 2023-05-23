@@ -11,7 +11,6 @@ class IspTextField: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         configure()
     }
     
@@ -21,27 +20,22 @@ class IspTextField: UITextField {
     
     convenience init(placeholder: String) {
         self.init(frame: .zero)
-        
         self.placeholder = placeholder
     }
     
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         
-        layer.borderWidth = 1
-        layer.borderColor = CGColor(gray: 0.5, alpha: 0.5)
+        layer.borderWidth = 2
+        layer.borderColor = CGColor(gray: 0.5, alpha: 1)
         layer.cornerRadius = 7
-        backgroundColor = .black
+        backgroundColor = .systemBackground
         
-        textColor = .white
+        textColor = .label
         textAlignment = .left
         
-        attributedPlaceholder = NSAttributedString(
-            string: "Placeholder Text",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
-        )
-        
         autocorrectionType = .no
+        autocapitalizationType = .none
         
         leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: frame.height))
         leftViewMode = .always

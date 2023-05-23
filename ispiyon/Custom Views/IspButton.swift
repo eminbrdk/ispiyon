@@ -11,7 +11,6 @@ class IspButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         configure()
     }
     
@@ -24,6 +23,7 @@ class IspButton: UIButton {
         
         self.configuration?.title = title
         self.configuration?.baseBackgroundColor = backgroundColor
+        self.configuration?.baseForegroundColor = .white
     }
     
     private func configure() {
@@ -31,6 +31,5 @@ class IspButton: UIButton {
         
         configuration = .filled()
         configuration?.cornerStyle = .medium
-        configuration?.baseForegroundColor = .white
     }
 }

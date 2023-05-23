@@ -8,8 +8,9 @@
 import UIKit
 import Firebase
 
-class IspiyonlaVC: UIViewController {
+class ComplainVC: UIViewController {
     
+    let userName = Auth.auth().currentUser!.email
     let vehicles = ["Otobüs", "Taksi", "Uber", "Şehirler Arası Otobüs"]
     let vehicleButton = IspButton(title: "Otobüs", backgroundColor: IspColors.buttonColor2)
     let vehiclePickerView = UIPickerView()
@@ -18,41 +19,49 @@ class IspiyonlaVC: UIViewController {
     let complaintTextView = IspTextView()
     let complaintButton = IspButton(title: "ispikle", backgroundColor: IspColors.buttonColor1)
     
-    let db = Firestore.firestore()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        applyDefaultScreenSettings()
-        addSignOutButtonToRight()
-        configurePickerView()
         configureView()
+        giveInfoAboutComplaining()
+        configurePickerView()
+        configureCustomViews()
         createDismissKeyboardTapGesture()
     }
     
-    func configurePickerView() {
+    private func configureView() {
+        title = "ispiyonla"
+        applyDefaultScreenSettings()
+        addSignOutButtonToRight()
+    }
+    
+    private func giveInfoAboutComplaining() {
+        presentIspAlert(title: "Hey", message: "Otobüs yazan butona tıklayıp şikayet etmek istediğiniz araç türünü seçin ve şikayetinizi yapın :)", buttonTitle: "Tamam")
+    }
+    
+    private func configurePickerView() {
         vehiclePickerView.translatesAutoresizingMaskIntoConstraints = false
-        vehiclePickerView.backgroundColor = IspColors.pickerViewColor
+        vehiclePickerView.backgroundColor = .systemGray6
         vehiclePickerView.isHidden = true
         vehiclePickerView.delegate = self
         vehiclePickerView.dataSource = self
-        vehiclePickerView.layer.cornerRadius = 10
     }
     
-    func configureView() {
+    private func configureCustomViews() {
         view.addSubviews(vehicleButton, vehiclePickerView, plaqueTextField, complaintTextView, complaintButton)
         
         plaqueTextField.delegate = self
-        complaintTextView.delegate = self
         
-        makeSidesPadding(items: vehicleButton, vehiclePickerView, plaqueTextField, complaintTextView, complaintButton, padding: 20)
+        complaintTextView.delegate = self
+        complaintTextView.text = "Lütfen şikayetinizi buraya girin"
+        complaintTextView.textColor = .systemGray2
+        
+        view.makeSidesPadding(items: vehicleButton, plaqueTextField, complaintTextView, complaintButton, padding: 20)
+        view.makeSidesPadding(items: vehiclePickerView, padding: 0)
         
         NSLayoutConstraint.activate([
             vehicleButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
             vehicleButton.heightAnchor.constraint(equalToConstant: 50),
-            
-            vehiclePickerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
-            vehiclePickerView.heightAnchor.constraint(equalToConstant: 100),
             
             plaqueTextField.topAnchor.constraint(equalTo: vehicleButton.bottomAnchor, constant: 10),
             plaqueTextField.heightAnchor.constraint(equalToConstant: 45),
@@ -61,45 +70,46 @@ class IspiyonlaVC: UIViewController {
             complaintTextView.heightAnchor.constraint(equalToConstant: 120),
             
             complaintButton.topAnchor.constraint(equalTo: complaintTextView.bottomAnchor, constant: 10),
-            complaintButton.heightAnchor.constraint(equalToConstant: 50)
+            complaintButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            vehiclePickerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            vehiclePickerView.heightAnchor.constraint(equalToConstant: 150),
         ])
         
         vehicleButton.addTarget(self, action: #selector(vehicleButtonPressed), for: .touchUpInside)
         complaintButton.addTarget(self, action: #selector(complaintButtonPressed), for: .touchUpInside)
     }
     
-    @objc func vehicleButtonPressed() {
+    @objc private func vehicleButtonPressed() {
         view.endEditing(true)
         vehiclePickerView.isHidden = false
     }
     
-    @objc func complaintButtonPressed() {
+    @objc private func complaintButtonPressed() {
         guard let plaka = plaqueTextField.text, !plaka.isEmpty,
-              let şikayet = complaintTextView.text, !şikayet.isEmpty else { return }
+              let şikayet = complaintTextView.text, !şikayet.isEmpty, şikayet != "Lütfen şikayetinizi buraya girin" else {
+            presentIspAlert(title: "Upss", message: "Lütfen tüm boşlukları doldurunuz", buttonTitle: "Tamam")
+            return
+        }
         let binek = vehicleButton.titleLabel!.text!
-        let user = FirebaseAuth.Auth.auth().currentUser!.email!
         
-        db.collection("ispiyon").addDocument(data: [
-            "gönderen": user,
-            "araç": binek,
-            "plaka": plaka,
-            "şikayet": şikayet,
-            "zaman": Date().timeIntervalSince1970
-        ])
+        DataManager.shared.addİspiyon(user: userName!, binek: binek, plaka: plaka, şikayet: şikayet)
         
         view.endEditing(true)
         plaqueTextField.text = ""
-        complaintTextView.text = ""
+        complaintTextView.text = "Lütfen şikayetinizi buraya girin"
+        complaintTextView.textColor = .systemGray2
+        self.presentIspAlert(title: "İspikledin", message: "Şikayetiniz yapılmıştır. İspiyonlar sayfasından şikayetleri görebilirsiniz.", buttonTitle: "Tamam")
     }
 }
 
 // MARK: - Configure PickerView
 
-extension IspiyonlaVC: UIPickerViewDelegate, UIPickerViewDataSource {
+extension ComplainVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let title = vehicles[row]
-        let attributedString = NSAttributedString(string: title, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        let attributedString = NSAttributedString(string: title, attributes: [NSAttributedString.Key.foregroundColor : UIColor.label])
         return attributedString
     }
     
@@ -132,10 +142,22 @@ extension IspiyonlaVC: UIPickerViewDelegate, UIPickerViewDataSource {
 
 // MARK: - Configure TextFields
 
-extension IspiyonlaVC: UITextFieldDelegate, UITextViewDelegate {
+extension ComplainVC: UITextFieldDelegate, UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         vehiclePickerView.isHidden = true
+        
+        if textView.textColor == UIColor.systemGray2 {
+            textView.text = nil
+            textView.textColor = .label
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Lütfen şikayetinizi buraya girin"
+            textView.textColor = UIColor.systemGray2
+        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

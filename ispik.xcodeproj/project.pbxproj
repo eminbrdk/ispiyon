@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		772D75E98712A0BC753697A3 /* Pods_ispiyon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D38F3DA69EAC2A39D52B34F /* Pods_ispiyon.framework */; };
+		270254D339AEEDF16B6A6E17 /* Pods_ispik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A840C1613B2919A7B7A527D6 /* Pods_ispik.framework */; };
 		B824389E29C07C28004660E1 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824389D29C07C28004660E1 /* UIColor + Ext.swift */; };
 		B82438A129C07D06004660E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82438A029C07D06004660E1 /* Constants.swift */; };
 		B82438A329C08407004660E1 /* Navigation-Tabbar-Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82438A229C08407004660E1 /* Navigation-Tabbar-Helper.swift */; };
+		B89980602A175E4D008F8312 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B899805F2A175E4D008F8312 /* DataManager.swift */; };
+		B89980622A177894008F8312 /* IspError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89980612A177894008F8312 /* IspError.swift */; };
+		B89980642A1778A2008F8312 /* IspAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89980632A1778A2008F8312 /* IspAlert.swift */; };
 		B8EF68C129BF2F7B00DF0358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68C029BF2F7B00DF0358 /* AppDelegate.swift */; };
 		B8EF68C329BF2F7B00DF0358 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68C229BF2F7B00DF0358 /* SceneDelegate.swift */; };
 		B8EF68CA29BF2F7D00DF0358 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8EF68C929BF2F7D00DF0358 /* Assets.xcassets */; };
 		B8EF68CD29BF2F7D00DF0358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8EF68CB29BF2F7D00DF0358 /* LaunchScreen.storyboard */; };
 		B8EF68D529BF300C00DF0358 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68D429BF300C00DF0358 /* WelcomeVC.swift */; };
 		B8EF68DA29BF30E900DF0358 /* IspButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68D929BF30E900DF0358 /* IspButton.swift */; };
-		B8EF68DE29BF352D00DF0358 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68DD29BF352D00DF0358 /* AuthenticationVC.swift */; };
 		B8EF68E029BF375500DF0358 /* IspTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68DF29BF375500DF0358 /* IspTextField.swift */; };
 		B8EF68E329BF392D00DF0358 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68E229BF392D00DF0358 /* UIView + Ext.swift */; };
-		B8EF68E529BF3E6700DF0358 /* IspiyonlaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68E429BF3E6700DF0358 /* IspiyonlaVC.swift */; };
-		B8EF68E729BF3E9700DF0358 /* IspiyonlarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68E629BF3E9700DF0358 /* IspiyonlarVC.swift */; };
+		B8EF68E529BF3E6700DF0358 /* ComplainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68E429BF3E6700DF0358 /* ComplainVC.swift */; };
+		B8EF68E729BF3E9700DF0358 /* ComplaintsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68E629BF3E9700DF0358 /* ComplaintsVC.swift */; };
 		B8EF68E929BF4C3400DF0358 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8EF68E829BF4C3400DF0358 /* GoogleService-Info.plist */; };
 		B8EF68EB29BF502B00DF0358 /* IspTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68EA29BF502B00DF0358 /* IspTabbarController.swift */; };
 		B8EF68ED29BF585500DF0358 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68EC29BF585500DF0358 /* UIViewController + Ext.swift */; };
@@ -30,16 +32,20 @@
 		B8EF68F329BF9EA900DF0358 /* IspTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68F229BF9EA900DF0358 /* IspTitleLabel.swift */; };
 		B8EF68F529BF9F1C00DF0358 /* IspSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68F429BF9F1C00DF0358 /* IspSecondaryTitleLabel.swift */; };
 		B8EF68F729BF9F9900DF0358 /* IspTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68F629BF9F9900DF0358 /* IspTextLabel.swift */; };
-		B8EF68F929BFB8A300DF0358 /* IspiyonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68F829BFB8A300DF0358 /* IspiyonVC.swift */; };
+		B8EF68F929BFB8A300DF0358 /* ComplaintVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF68F829BFB8A300DF0358 /* ComplaintVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8659F9FF4A4D7C3AECBF527C /* Pods-ispiyon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ispiyon.release.xcconfig"; path = "Target Support Files/Pods-ispiyon/Pods-ispiyon.release.xcconfig"; sourceTree = "<group>"; };
-		8D38F3DA69EAC2A39D52B34F /* Pods_ispiyon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ispiyon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		043537FBDC62290C1AA912EC /* Pods-ispik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ispik.debug.xcconfig"; path = "Target Support Files/Pods-ispik/Pods-ispik.debug.xcconfig"; sourceTree = "<group>"; };
+		A37636095530504B2F9E58A3 /* Pods-ispik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ispik.release.xcconfig"; path = "Target Support Files/Pods-ispik/Pods-ispik.release.xcconfig"; sourceTree = "<group>"; };
+		A840C1613B2919A7B7A527D6 /* Pods_ispik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ispik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B824389D29C07C28004660E1 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		B82438A029C07D06004660E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B82438A229C08407004660E1 /* Navigation-Tabbar-Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation-Tabbar-Helper.swift"; sourceTree = "<group>"; };
-		B8EF68BD29BF2F7B00DF0358 /* ispiyon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ispiyon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B899805F2A175E4D008F8312 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B89980612A177894008F8312 /* IspError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspError.swift; sourceTree = "<group>"; };
+		B89980632A1778A2008F8312 /* IspAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspAlert.swift; sourceTree = "<group>"; };
+		B8EF68BD29BF2F7B00DF0358 /* ispik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ispik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8EF68C029BF2F7B00DF0358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8EF68C229BF2F7B00DF0358 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B8EF68C929BF2F7D00DF0358 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,11 +53,10 @@
 		B8EF68CE29BF2F7D00DF0358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8EF68D429BF300C00DF0358 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		B8EF68D929BF30E900DF0358 /* IspButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspButton.swift; sourceTree = "<group>"; };
-		B8EF68DD29BF352D00DF0358 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		B8EF68DF29BF375500DF0358 /* IspTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspTextField.swift; sourceTree = "<group>"; };
 		B8EF68E229BF392D00DF0358 /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
-		B8EF68E429BF3E6700DF0358 /* IspiyonlaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspiyonlaVC.swift; sourceTree = "<group>"; };
-		B8EF68E629BF3E9700DF0358 /* IspiyonlarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspiyonlarVC.swift; sourceTree = "<group>"; };
+		B8EF68E429BF3E6700DF0358 /* ComplainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplainVC.swift; sourceTree = "<group>"; };
+		B8EF68E629BF3E9700DF0358 /* ComplaintsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintsVC.swift; sourceTree = "<group>"; };
 		B8EF68E829BF4C3400DF0358 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8EF68EA29BF502B00DF0358 /* IspTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspTabbarController.swift; sourceTree = "<group>"; };
 		B8EF68EC29BF585500DF0358 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
@@ -60,8 +65,7 @@
 		B8EF68F229BF9EA900DF0358 /* IspTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspTitleLabel.swift; sourceTree = "<group>"; };
 		B8EF68F429BF9F1C00DF0358 /* IspSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		B8EF68F629BF9F9900DF0358 /* IspTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspTextLabel.swift; sourceTree = "<group>"; };
-		B8EF68F829BFB8A300DF0358 /* IspiyonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspiyonVC.swift; sourceTree = "<group>"; };
-		D076A2A74014D2C61CA4E22C /* Pods-ispiyon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ispiyon.debug.xcconfig"; path = "Target Support Files/Pods-ispiyon/Pods-ispiyon.debug.xcconfig"; sourceTree = "<group>"; };
+		B8EF68F829BFB8A300DF0358 /* ComplaintVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				772D75E98712A0BC753697A3 /* Pods_ispiyon.framework in Frameworks */,
+				270254D339AEEDF16B6A6E17 /* Pods_ispik.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +85,17 @@
 			children = (
 				B82438A029C07D06004660E1 /* Constants.swift */,
 				B82438A229C08407004660E1 /* Navigation-Tabbar-Helper.swift */,
+				B89980612A177894008F8312 /* IspError.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B899805E2A175E40008F8312 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B899805F2A175E4D008F8312 /* DataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		B8EF68B429BF2F7B00DF0358 = {
@@ -98,7 +111,7 @@
 		B8EF68BE29BF2F7B00DF0358 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B8EF68BD29BF2F7B00DF0358 /* ispiyon.app */,
+				B8EF68BD29BF2F7B00DF0358 /* ispik.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,11 +119,12 @@
 		B8EF68BF29BF2F7B00DF0358 /* ispiyon */ = {
 			isa = PBXGroup;
 			children = (
+				B8EF68D629BF307B00DF0358 /* Supports */,
 				B824389F29C07CF3004660E1 /* Utilities */,
 				B8EF68E129BF391600DF0358 /* Extensions */,
+				B899805E2A175E40008F8312 /* Managers */,
 				B8EF68D829BF309600DF0358 /* Custom Views */,
 				B8EF68D729BF308700DF0358 /* Screens */,
-				B8EF68D629BF307B00DF0358 /* Supports */,
 				B8EF68CE29BF2F7D00DF0358 /* Info.plist */,
 				B8EF68E829BF4C3400DF0358 /* GoogleService-Info.plist */,
 			);
@@ -132,10 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				B8EF68D429BF300C00DF0358 /* WelcomeVC.swift */,
-				B8EF68DD29BF352D00DF0358 /* AuthenticationVC.swift */,
-				B8EF68E429BF3E6700DF0358 /* IspiyonlaVC.swift */,
-				B8EF68E629BF3E9700DF0358 /* IspiyonlarVC.swift */,
-				B8EF68F829BFB8A300DF0358 /* IspiyonVC.swift */,
+				B8EF68E429BF3E6700DF0358 /* ComplainVC.swift */,
+				B8EF68E629BF3E9700DF0358 /* ComplaintsVC.swift */,
+				B8EF68F829BFB8A300DF0358 /* ComplaintVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -145,12 +158,13 @@
 			children = (
 				B8EF68D929BF30E900DF0358 /* IspButton.swift */,
 				B8EF68DF29BF375500DF0358 /* IspTextField.swift */,
-				B8EF68EA29BF502B00DF0358 /* IspTabbarController.swift */,
 				B8EF68EE29BF6E5900DF0358 /* IspTextView.swift */,
-				B8EF68F029BF9BAF00DF0358 /* ŞikayetCell.swift */,
 				B8EF68F229BF9EA900DF0358 /* IspTitleLabel.swift */,
 				B8EF68F429BF9F1C00DF0358 /* IspSecondaryTitleLabel.swift */,
 				B8EF68F629BF9F9900DF0358 /* IspTextLabel.swift */,
+				B8EF68EA29BF502B00DF0358 /* IspTabbarController.swift */,
+				B89980632A1778A2008F8312 /* IspAlert.swift */,
+				B8EF68F029BF9BAF00DF0358 /* ŞikayetCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -168,7 +182,7 @@
 		C3346E428F8AA7729E5911C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8D38F3DA69EAC2A39D52B34F /* Pods_ispiyon.framework */,
+				A840C1613B2919A7B7A527D6 /* Pods_ispik.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,8 +190,8 @@
 		D36ABA68141FA228EC950D11 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D076A2A74014D2C61CA4E22C /* Pods-ispiyon.debug.xcconfig */,
-				8659F9FF4A4D7C3AECBF527C /* Pods-ispiyon.release.xcconfig */,
+				043537FBDC62290C1AA912EC /* Pods-ispik.debug.xcconfig */,
+				A37636095530504B2F9E58A3 /* Pods-ispik.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -185,9 +199,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B8EF68BC29BF2F7B00DF0358 /* ispiyon */ = {
+		B8EF68BC29BF2F7B00DF0358 /* ispik */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B8EF68D129BF2F7D00DF0358 /* Build configuration list for PBXNativeTarget "ispiyon" */;
+			buildConfigurationList = B8EF68D129BF2F7D00DF0358 /* Build configuration list for PBXNativeTarget "ispik" */;
 			buildPhases = (
 				1CD9B2435FE8E21788C4EF49 /* [CP] Check Pods Manifest.lock */,
 				B8EF68B929BF2F7B00DF0358 /* Sources */,
@@ -199,9 +213,9 @@
 			);
 			dependencies = (
 			);
-			name = ispiyon;
+			name = ispik;
 			productName = ispiyon;
-			productReference = B8EF68BD29BF2F7B00DF0358 /* ispiyon.app */;
+			productReference = B8EF68BD29BF2F7B00DF0358 /* ispik.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +233,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B8EF68B829BF2F7B00DF0358 /* Build configuration list for PBXProject "ispiyon" */;
+			buildConfigurationList = B8EF68B829BF2F7B00DF0358 /* Build configuration list for PBXProject "ispik" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -232,7 +246,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B8EF68BC29BF2F7B00DF0358 /* ispiyon */,
+				B8EF68BC29BF2F7B00DF0358 /* ispik */,
 			);
 		};
 /* End PBXProject section */
@@ -266,7 +280,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ispiyon-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ispik-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -275,19 +289,19 @@
 		};
 		E4936299A63B38621C34F55C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ispiyon/Pods-ispiyon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ispik/Pods-ispik-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ispiyon/Pods-ispiyon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ispik/Pods-ispik-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ispiyon/Pods-ispiyon-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ispik/Pods-ispik-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -307,16 +321,18 @@
 				B82438A329C08407004660E1 /* Navigation-Tabbar-Helper.swift in Sources */,
 				B8EF68E029BF375500DF0358 /* IspTextField.swift in Sources */,
 				B8EF68EF29BF6E5900DF0358 /* IspTextView.swift in Sources */,
+				B89980602A175E4D008F8312 /* DataManager.swift in Sources */,
+				B89980622A177894008F8312 /* IspError.swift in Sources */,
 				B8EF68ED29BF585500DF0358 /* UIViewController + Ext.swift in Sources */,
 				B8EF68F529BF9F1C00DF0358 /* IspSecondaryTitleLabel.swift in Sources */,
-				B8EF68E729BF3E9700DF0358 /* IspiyonlarVC.swift in Sources */,
+				B8EF68E729BF3E9700DF0358 /* ComplaintsVC.swift in Sources */,
 				B8EF68DA29BF30E900DF0358 /* IspButton.swift in Sources */,
-				B8EF68E529BF3E6700DF0358 /* IspiyonlaVC.swift in Sources */,
+				B8EF68E529BF3E6700DF0358 /* ComplainVC.swift in Sources */,
 				B8EF68C329BF2F7B00DF0358 /* SceneDelegate.swift in Sources */,
-				B8EF68F929BFB8A300DF0358 /* IspiyonVC.swift in Sources */,
+				B89980642A1778A2008F8312 /* IspAlert.swift in Sources */,
+				B8EF68F929BFB8A300DF0358 /* ComplaintVC.swift in Sources */,
 				B8EF68EB29BF502B00DF0358 /* IspTabbarController.swift in Sources */,
 				B8EF68F729BF9F9900DF0358 /* IspTextLabel.swift in Sources */,
-				B8EF68DE29BF352D00DF0358 /* AuthenticationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +466,7 @@
 		};
 		B8EF68D229BF2F7D00DF0358 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D076A2A74014D2C61CA4E22C /* Pods-ispiyon.debug.xcconfig */;
+			baseConfigurationReference = 043537FBDC62290C1AA912EC /* Pods-ispik.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,13 +478,17 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emoooqwe.ispiyon;
+				PRODUCT_BUNDLE_IDENTIFIER = emobabo.ispiyon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -477,7 +497,7 @@
 		};
 		B8EF68D329BF2F7D00DF0358 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8659F9FF4A4D7C3AECBF527C /* Pods-ispiyon.release.xcconfig */;
+			baseConfigurationReference = A37636095530504B2F9E58A3 /* Pods-ispik.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -489,13 +509,17 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emoooqwe.ispiyon;
+				PRODUCT_BUNDLE_IDENTIFIER = emobabo.ispiyon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -505,7 +529,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B8EF68B829BF2F7B00DF0358 /* Build configuration list for PBXProject "ispiyon" */ = {
+		B8EF68B829BF2F7B00DF0358 /* Build configuration list for PBXProject "ispik" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8EF68CF29BF2F7D00DF0358 /* Debug */,
@@ -514,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B8EF68D129BF2F7D00DF0358 /* Build configuration list for PBXNativeTarget "ispiyon" */ = {
+		B8EF68D129BF2F7D00DF0358 /* Build configuration list for PBXNativeTarget "ispik" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8EF68D229BF2F7D00DF0358 /* Debug */,

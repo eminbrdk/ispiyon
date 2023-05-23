@@ -22,13 +22,13 @@ class IspTextView: UITextView {
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         
-        layer.borderWidth = 1
-        layer.borderColor = CGColor(gray: 0.5, alpha: 0.5)
+        layer.borderWidth = 2
+        layer.borderColor = CGColor(gray: 0.5, alpha: 1)
         layer.cornerRadius = 7
-        backgroundColor = .black
+        backgroundColor = .systemBackground
         
         textAlignment = .left
-        textColor = .white
+        textColor = .label
         font = UIFont.systemFont(ofSize: 16, weight: .regular)
         
         autocorrectionType = .no
