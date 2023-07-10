@@ -8,5 +8,5 @@ Toplu taşımalar yada taksi gibi ulaşım için kullanılan araçlar hakkında 
 ...
 
 # Ekran Görüntüleri
-https://user-images.githubusercontent.com/109954489/226095879-8c6427b8-34bf-4de3-a3b3-9b117680da03.mp4
+https://github.com/eminbrdk/ispiyon/assets/109954489/c8f069aa-495d-49e7-b166-bda66cb37941
 
