@@ -11,6 +11,7 @@
 		B824389E29C07C28004660E1 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824389D29C07C28004660E1 /* UIColor + Ext.swift */; };
 		B82438A129C07D06004660E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82438A029C07D06004660E1 /* Constants.swift */; };
 		B82438A329C08407004660E1 /* Navigation-Tabbar-Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82438A229C08407004660E1 /* Navigation-Tabbar-Helper.swift */; };
+		B897B9112A27DD2E00701DDD /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B897B9102A27DD2E00701DDD /* String + Ext.swift */; };
 		B89980602A175E4D008F8312 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B899805F2A175E4D008F8312 /* DataManager.swift */; };
 		B89980622A177894008F8312 /* IspError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89980612A177894008F8312 /* IspError.swift */; };
 		B89980642A1778A2008F8312 /* IspAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89980632A1778A2008F8312 /* IspAlert.swift */; };
@@ -42,6 +43,7 @@
 		B824389D29C07C28004660E1 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		B82438A029C07D06004660E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B82438A229C08407004660E1 /* Navigation-Tabbar-Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation-Tabbar-Helper.swift"; sourceTree = "<group>"; };
+		B897B9102A27DD2E00701DDD /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
 		B899805F2A175E4D008F8312 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B89980612A177894008F8312 /* IspError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspError.swift; sourceTree = "<group>"; };
 		B89980632A1778A2008F8312 /* IspAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IspAlert.swift; sourceTree = "<group>"; };
@@ -125,8 +127,8 @@
 				B899805E2A175E40008F8312 /* Managers */,
 				B8EF68D829BF309600DF0358 /* Custom Views */,
 				B8EF68D729BF308700DF0358 /* Screens */,
-				B8EF68CE29BF2F7D00DF0358 /* Info.plist */,
 				B8EF68E829BF4C3400DF0358 /* GoogleService-Info.plist */,
+				B8EF68CE29BF2F7D00DF0358 /* Info.plist */,
 			);
 			path = ispiyon;
 			sourceTree = "<group>";
@@ -175,6 +177,7 @@
 				B8EF68E229BF392D00DF0358 /* UIView + Ext.swift */,
 				B8EF68EC29BF585500DF0358 /* UIViewController + Ext.swift */,
 				B824389D29C07C28004660E1 /* UIColor + Ext.swift */,
+				B897B9102A27DD2E00701DDD /* String + Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,7 +292,7 @@
 		};
 		E4936299A63B38621C34F55C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -299,7 +302,7 @@
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ispik/Pods-ispik-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ispik/Pods-ispik-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
@@ -318,6 +321,7 @@
 				B8EF68E329BF392D00DF0358 /* UIView + Ext.swift in Sources */,
 				B8EF68C129BF2F7B00DF0358 /* AppDelegate.swift in Sources */,
 				B8EF68F329BF9EA900DF0358 /* IspTitleLabel.swift in Sources */,
+				B897B9112A27DD2E00701DDD /* String + Ext.swift in Sources */,
 				B82438A329C08407004660E1 /* Navigation-Tabbar-Helper.swift in Sources */,
 				B8EF68E029BF375500DF0358 /* IspTextField.swift in Sources */,
 				B8EF68EF29BF6E5900DF0358 /* IspTextView.swift in Sources */,

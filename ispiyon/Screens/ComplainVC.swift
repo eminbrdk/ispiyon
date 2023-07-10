@@ -54,7 +54,7 @@ class ComplainVC: UIViewController {
         
         complaintTextView.delegate = self
         complaintTextView.text = "Lütfen şikayetinizi buraya girin"
-        complaintTextView.textColor = .systemGray2
+        complaintTextView.textColor = .systemGray
         
         view.makeSidesPadding(items: vehicleButton, plaqueTextField, complaintTextView, complaintButton, padding: 20)
         view.makeSidesPadding(items: vehiclePickerView, padding: 0)
@@ -98,7 +98,7 @@ class ComplainVC: UIViewController {
         view.endEditing(true)
         plaqueTextField.text = ""
         complaintTextView.text = "Lütfen şikayetinizi buraya girin"
-        complaintTextView.textColor = .systemGray2
+        complaintTextView.textColor = .systemGray
         self.presentIspAlert(title: "İspikledin", message: "Şikayetiniz yapılmıştır. İspiyonlar sayfasından şikayetleri görebilirsiniz.", buttonTitle: "Tamam")
     }
 }
@@ -147,7 +147,7 @@ extension ComplainVC: UITextFieldDelegate, UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         vehiclePickerView.isHidden = true
         
-        if textView.textColor == UIColor.systemGray2 {
+        if textView.textColor == UIColor.systemGray {
             textView.text = nil
             textView.textColor = .label
         }
@@ -156,7 +156,7 @@ extension ComplainVC: UITextFieldDelegate, UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = "Lütfen şikayetinizi buraya girin"
-            textView.textColor = UIColor.systemGray2
+            textView.textColor = UIColor.systemGray
         }
     }
     

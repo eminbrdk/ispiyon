@@ -1,10 +1,3 @@
-//
-//  IspiyonlarVC.swift
-//  ispiyon
-//
-//  Created by Muhammed Emin Bardakcı on 13.03.2023.
-//
-
 import UIKit
 import Firebase
 
